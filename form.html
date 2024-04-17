@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employment Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      
+        <header>Employment Application</header>
+        
+
+      <form id="regForm" action="#" method="#">
+        <div class="step-row">
+          <div class="step-col step"></div>
+          <div class="step-col step"></div>
+          <div class="step-col step"></div>
+        </div>
+        <div id="form1" class="tab">
+          <div class="input-box">
+            <label for="fname">First Name </label>
+            <input
+              type="text"
+              id="fname"
+              name="fn"
+              placeholder="first name"
+              oninput="this.className = ''"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="ln"
+              placeholder="last name"
+              oninput="this.className = ''"
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="email">E-mail Id </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e-mail"
+              oninput="this.className = ''"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="address">Address </label>
+            <input
+              type="text"
+              id="address"
+              name="add"
+              placeholder="Current / Permanent"
+              oninput="this.className = ''"
+              required
+            />
+          </div>
+        </div>
+
+        <div id="form2" class="tab">
+          <div class="column">
+            <div class="input-box">
+              <label for="phone">Phone number</label>
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                placeholder="phone number"
+                oninput="this.className = ''"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="alt_phone">Alternate phone number</label>
+              <input
+                type="number"
+                id="alt_phone"
+                name="alt_phone"
+                placeholder="alternate number"
+                oninput="this.className = ''"
+              />
+            </div>
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label for="salary">Salary requirments</label>
+              <input
+                type="number"
+                id="salary"
+                name="salary"
+                oninput="this.className = ''"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="start">When can you start</label>
+              <input
+                type="text"
+                id="start"
+                name="start"
+                placeholder="immediate / after notice period "
+                oninput="this.className = ''"
+                required
+              />
+            </div>
+          </div>
+          <div class="relocate-box">
+            <h4>Are you willing to relocate</h4>
+            <div class="relocate-option">
+              <div class="relocate">
+                <input type="radio" id="check-male" name="relocate" checked />
+                <label for="check-male">Yes</label>
+              </div>
+              <div class="relocate">
+                <input type="radio" id="check-female" name="relocate" />
+                <label for="check-female">No</label>
+              </div>
+              <div class="relocate">
+                <input type="radio" id="check-other" name="relocate" />
+                <label for="check-other">Not sure</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="form3" class="tab">
+          <div class="input-box">
+            <label for="last_company">Last company you worked for / fresher</label>
+            <input
+              type="text"
+              id="last_company"
+              name="last_company"
+              oninput="this.className = ''"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="position">
+              Position applying for private job / Government undertaken firm
+            </label>
+            <input
+              type="text"
+              id="position"
+              name="position"
+              oninput="this.className = ''"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="comments">Comments</label>
+            <input
+              type="text"
+              id="comments"
+              name="comments"
+              oninput="this.className = ''"
+              placeholder="References / Comments / Questions"
+            />
+          </div>
+        </div>
+
+        <div style="overflow: auto">
+            <div class="btn-box column">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+              Previous
+            </button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">
+              Next
+            </button>
+          </div>
+          
+          </div>
+        </div>
+      </form>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
