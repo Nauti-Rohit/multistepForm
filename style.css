@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container form {
+  margin-top: 10px;
+}
+form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+form :where(.input-box input) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+form .column {
+  display: flex;
+  column-gap: 15px;
+}
+form .relocate-box {
+  margin-top: 20px;
+}
+.relocate-box h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+form :where(.relocate-option, .relocate) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+form .relocate {
+  column-gap: 5px;
+}
+.relocate input {
+  accent-color: rgb(130, 106, 251);
+}
+form :where(.relocate input, .relocate label) {
+  cursor: pointer;
+}
+.relocate label {
+  color: #707070;
+}
+form button {
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+form button:hover {
+  background: #5838fa;
+}
+#form2 {
+  display: none;
+}
+#form3 {
+  display: none;
+}
+.step-row {
+  width: auto;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -1px 5px -1px #000;
+  position: relative;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 20px;
+  background-color: #00f;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #0f0;
+}
+
+/*Responsive*/
+@media screen and (max-width: 240px) {
+  header {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.relocate-option, .relocate) {
+    row-gap: 15px;
+  }
+}
